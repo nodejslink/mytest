@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>tesseract辨識</title>
+    <script src='https://unpkg.com/tesseract.js@v2.1.0/dist/tesseract.min.js'></script>
+</head>
+
+<body>
+    <div >
+        <p id="demo1"></p>
+        <p id="demo2"></p>
+        <p id="demo3"></p>
+        <p id="demo4"></p>
+        <p id="demo5"></p>
+    </div>
+    <script>
+        //source form https://github.com/naptha/tesseract.js/
+        Tesseract.recognize(
+            // 'https://tesseract.projectnaptha.com/img/eng_bw.png',
+            // './img/eng_bw.png','eng',
+            // './img/發票1.jfif','chi_sim',//chi_tra
+            // 車牌
+             './img/8888.jpg','eng',
+            { logger: m => console.log(m) }
+        ).then(({ data: { text } }) => {
+            console.log(text);
+            document.getElementById('demo1').innerHTML = "車牌:"+text;
+        })
+    </script>
+    <script>
+        Tesseract.recognize(
+            // 車牌
+             './img/car.png','eng',
+            { logger: m => console.log(m) }
+        ).then(({ data: { text } }) => {
+            console.log(text);
+            document.getElementById('demo2').innerHTML = "車牌:"+text;
+        })
+    </script>   
+
+    <script>
+        Tesseract.recognize(
+             './img/發票1.jfif','chi_tra',//chi_tra
+            { logger: m => console.log(m) }
+        ).then(({ data: { text } }) => {
+            console.log(text);
+            document.getElementById('demo3').innerHTML = "發票-chi_tra:"+text;
+        })
+    </script>      
+        <script>
+            Tesseract.recognize(
+                 './img/發票1.jfif','chi_sim',//chi_tra
+                { logger: m => console.log(m) }
+            ).then(({ data: { text } }) => {
+                console.log(text);
+                document.getElementById('demo4').innerHTML =  "發票-chi_sim:"+text;
+            })
+        </script>   
+    
+    <script>
+        Tesseract.recognize(
+             './img/發票1.jfif','eng',//chi_tra
+            { logger: m => console.log(m) }
+        ).then(({ data: { text } }) => {
+            console.log(text);
+            document.getElementById('demo5').innerHTML =  "發票-eng:"+text;
+        })
+    </script>    
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+/* 先調整背景及欄位 */
+body {
+    font-family: Roboto;
+    background-color: chocolate;
+    display: flex;
+    /* 欄位字体置中 */
+    align-items: center;
+    justify-content: center;
+}
+
+/* 接下來調整form =>記得先加class*/
+.login {
+    background-color: rgb(6, 6, 6);
+    width: 400px;
+    color: azure;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #000800;
+    text-align: center;
+}
+
+.login input {
+    display: block;
+    margin: 20px auto;
+    background: none;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    /* 輸入框改圓角 */
+    border-radius: 20px;
+    /* 去輪廓線 */
+    outline: none;
+    /* 換文字顏色 */
+    color: rgb(248, 248, 250);
+
+}
+
+/* 更換邊框顏色 */
+.login input[type="text"],
+.login input[type="password"] {
+    border: 3px solid blue;
+    width: 220px;
+}
+
+/* 設置按鈕的動作 */
+.login input[type="submit"] {
+    width: 150px;
+    border: 2px solid green;
+    cursor: pointer;
+    /* 滑鼠移動至按鍵時改為手指符號 */
+
+}
+
+/* 輸入框加入一點動畫antimation-focus selector */
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: green;
+    width: 280px;
+    transition: 0.5s;
+}
+
+/* 設置按鈕的hover selection  */
+.login input[type="submit"]:hover {
+    background-color: green;
+    transition: 0.5s;
+}

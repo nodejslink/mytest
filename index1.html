@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <!-- <script src="ajax xhr斷點測試.js"></script> -->
+
+</head>
+<body>
+    <div>
+    <input type="button" class="btn" id="btn" value = "點擊" > 
+    <p id="demo"></p>
+    <input type="button"  class="btn1" id="btn1" value="加碼測試">
+    <p id = "demo1"></p>
+    </div>
+    <script src="all.js"></script>
+    <script>
+         var num = 0;
+         document.querySelector('.btn').addEventListener('click',function()
+         {
+            num = num + 1;
+            document.getElementById('demo').innerHTML= '計數=' + num;
+         })
+         
+        
+
+
+        // var xhr=new XMLHttpRequest();
+        // xhr.open('get','https://khh.travel/zh-tw/askme/all-regions?page=3');
+        // xhr.send();
+        // xhr.onload=function()
+        // {
+        //     console.log(xhr.responseText);
+        // }
+        
+    </script>
+    
+</body>
+</html>

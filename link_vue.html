@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+
+<html>
+
+<head>
+    <!-- Vue 2.x -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script> -->
+    <!-- Vue 3.0 -->
+    <script src="https://unpkg.com/vue@next"></script>
+
+
+</head>
+
+<body>
+
+    <!-- <div id="app">
+        {{ message }}
+    </div> -->
+    
+    <!-- <div id="app">
+      {{name}} 測試
+    </div>  -->
+<!-- vm1 -->
+<!-- <div id="app1">
+  <input type="text" v-model="name">
+</div> -->
+
+<!-- vm2 -->
+<!-- <div id="app2">
+  <input type="text" v-model="name">
+</div> -->
+<!-- test5 -->
+<!-- <div id="app">
+    <p>總金額共{{subtotal()}}元</p>
+    <p>總金額共{{subtotal()}}元</p>
+    <p>總金額共{{subtotal()}}元</p>
+</div> -->
+<!-- ===========test6===========-->
+
+<div id="app">
+  <p>1 日幣 = 0.278 台幣</p>
+  <div>台幣 <input type="text" v-model="twd" v-on:input="twd2jpy"></div>
+  <div>日幣 <input type="text" v-model="jpy" v-on:input="jpy2twd"></div>
+</div>
+
+
+
+<script src="link_vue.js"> </script>
+</body>
+
+
+</html>

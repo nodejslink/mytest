@@ -1,0 +1,8 @@
+.orange{
+font-size: 30px;
+color:orange;
+}
+/* 滑鼠移動至超連結時改變為紅色 */
+a:hover{
+    color:red;
+}
